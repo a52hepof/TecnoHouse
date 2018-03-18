@@ -41,8 +41,8 @@
                       <li><a href="">Pisos</a></li>
                      </ul>
                   </li>
-                <li><a href="registro.html" >Registro</a></li>
-                <li class="active"><a href="login.html">Iniciar Sesion</a></li>
+                <li class="active"><a href="" >Registro</a></li>
+                <li><a href="login.html">Iniciar Sesion</a></li>
               </ul>
             </div>
           </div>
@@ -54,29 +54,44 @@
           <div class="col-md-6">
             <div class="jumbotron">
               <div class="row">
-                <h2 class="text-center">Login</h2>
+                <h2 class="text-center">Registro</h2>
               </div>
               <div class="container">
-                <div class=" row loginbox_content ">                        
-                    <div class="input-group input-group-sm" >
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </span>
-                        <input class="form-control" type="text" placeholder="Usuario"  >
-                    </div>
-                    <br>
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-lock"></span>
-                        </span>
-                        <input class="form-control" type="password" placeholder="Contraseña" >
-                    </div>              
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="text" placeholder="NOMBRE" class="text-center">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="text" placeholder="APELLIDO PATERNO" class="text-center">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="text" placeholder="APELLIDO MATERNO" class="text-center">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="text" placeholder="CORREO" class="text-center">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="text" placeholder="USUARIO" class="text-center">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <input type="password" placeholder="PASSWORD" class="text-center">
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4"></div>
                   <div class="col-md-4 text-center">
                     <br><br>
-                    <input type="button"  value="Iniciar Sesion" class="btn btn-primary" onclick="Mensaje()"/>
+                    <input type="button"  value="Registrarse" class="btn btn-primary" onclick="Mensaje()"/>
                     <script>
                       function Mensaje(){
                         swal("Registro correcto","","success");
