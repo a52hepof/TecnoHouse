@@ -8,7 +8,7 @@
 	$password       = '12345';
 	$dbnombre		= 'id5118088_inmobiliaria';
 
-	$conexion = mysqli( $nombreServidor, $usuario, $password, $dbnombre );
+	$conexion = new mysqli( $nombreServidor, $usuario, $password, $dbnombre );
 
 	if( $conexion->connect_error ){
 		die( "Fallo la conexion: " . $conexion->connect_error );
@@ -23,7 +23,7 @@
 
 				CONSTRAINT chk_tipo_cuenta CHECK( tipo_cuenta = 'ADMINISTRADOR' | tipo_cuenta = 'EMPLEADO' | tipo_cuenta = 'CLIENTE'  )
 			);
-			ALTER TABLE ADD CONSTRAINT cuenta_pk PRIMARY KEY( id_cuente );
+			ALTER TABLE ADD CONSTRAINT cuenta_pk PRIMARY KEY( id_cuenta );
 			--
 			--TABLE: ADMINISTRADOR
 			--
@@ -180,7 +180,7 @@
 			--TABLE:PISO
 			--
 			CREATE TABLE PISO(
-				id_piso 			INT 			AUTO_INCREMENT NOT NULL,
+				id_piso 			INT 			AUTO_INCREMENT PRIMARY KEY,
 				id_inmueble 		INT 			NOT NULL,
 				num_habitaciones	INT 			NOT NULL,
 				num_banios 			INT 			NOT NULL,
