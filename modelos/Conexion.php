@@ -183,10 +183,7 @@
 		$query = $conexion->query( $sql );
 	}
 	if( !$query ){
-		$error[] = "Tabla ". $conexion->error;
-	}else{
-		$error[] = " Se creo correctamente. "; 
+		echo "Error";
 	}
-
 	$conexion->close();
 ?>
