@@ -35,11 +35,11 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Inmuebles<span class="caret"></span></a>
                      <!--Menu desplegable-->
                      <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Locales</a></li>
-                      <li><a href="">Pisos</a></li>
+                      <li><a href="#" id="locales">Locales</a></li>
+                      <li><a href="#" id="pisos">Pisos</a></li>
                      </ul>
                 </li>
-                <li><a href="">Apartados</a></li>                
+                <li><a href="#" id="apartados">Apartados</a></li>                
                 <li><a href="">Cerrar Sesion</a></li>
               </ul>
             </div>
@@ -48,7 +48,7 @@
       </header>
       <section class="container main" style="background-origin: url()">
         <div class="row">
-          <section class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
+          <section id="contenido" class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
             ajax
           </section>
         </div>
@@ -57,5 +57,20 @@
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(){
+          $('#locales').click(function(){
+            $("#contenido").load("locales.html");
+          });
+
+          $('#pisos').click(function(){
+            $("#contenido").load("pisos.html");
+          });
+
+          $('#apartados').click(function(){
+            $("#contenido").load("apartados.html");
+          });
+        });
+      </script>
     </body>
 </html>

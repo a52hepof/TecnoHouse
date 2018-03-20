@@ -35,18 +35,18 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Alta<span class="caret"></span></a>
                      <!--Menu desplegable-->
                      <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Locales</a></li>
-                      <li><a href="">Pisos</a></li>
+                      <li><a href="#" id="altaLocales">Locales</a></li>
+                      <li><a href="#" id="altaPisos">Pisos</a></li>
                      </ul>
                   </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Inmuebles<span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Locales</a></li>
-                      <li><a href="">Pisos</a></li>
+                      <li><a href="#" id="locales">Locales</a></li>
+                      <li><a href="#" id="pisos">Pisos</a></li>
                      </ul>
                   </li>
-                <li><a href="">Apartado</a></li>
+                <li><a href="#" id="reservar">Reservar</a></li>
                 <li><a href="">Cerrar Sesion</a></li>
               </ul>
             </div>
@@ -55,7 +55,7 @@
       </header>
       <section class="container main" style="background-origin: url()">
         <div class="row">
-          <section class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
+          <section id="contenido" class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
             ajax
           </section>
         </div>
@@ -64,5 +64,28 @@
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(){
+          $('#altaLocales').click(function(){
+            $("#contenido").load("altaLocales.html");
+          });
+
+          $('#altaPisos').click(function(){
+            $("#contenido").load("altaPisos.html");
+          });
+
+          $('#locales').click(function(){
+            $("#contenido").load("locales.html");
+          });
+
+          $('#pisos').click(function(){
+            $("#contenido").load("pisos.html");
+          });
+
+          $('#reservar').click(function(){
+            $("#contenido").load("reservar.html");
+          });
+        });
+      </script>
     </body>
 </html>

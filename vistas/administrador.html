@@ -35,17 +35,17 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Alta<span class="caret"></span></a>
                      <!--Menu desplegable-->
                      <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Cliente</a></li>
-                      <li><a href="">Empleado</a></li>
-                      <li><a href="">Sucursales</a></li>
+                      <li><a href="#" id="altaCliente">Cliente</a></li>
+                      <li><a href="#" id="altaEmpleado">Empleado</a></li>
+                      <li><a href="#" id="altaSucursal">Sucursales</a></li>
                      </ul>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Eliminiar<span class="caret"></span></a>
                      <!--Menu desplegable-->
                      <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Empleado</a></li>
-                      <li><a href="">Cliente</a></li>
+                      <li><a href="#" id="eliminarEmpleado">Empleado</a></li>
+                      <li><a href="#" id="eliminarCliente">Cliente</a></li>
                      </ul>
                 </li>
                 <li><a href="">Cerrar Sesion</a></li>
@@ -56,7 +56,7 @@
       </header>
       <section class="container main" style="background-origin: url()">
         <div class="row">
-          <section class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
+          <section id="contenido" class="col-md-12 posts jumbotron" style="background-color: gray"><!--Se agrega color de Fondo-->
             ajax
           </section>
         </div>
@@ -65,5 +65,28 @@
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(){
+          $('#altaCliente').click(function(){
+            $("#contenido").load("altaCliente.html");
+          });
+
+          $('#altaEmpleado').click(function(){
+            $("#contenido").load("altaEmpleado.html");
+          });
+
+          $('#altaSucursal').click(function(){
+            $("#contenido").load("altaSucursal.html");
+          });
+
+          $('#eliminarCliente').click(function(){
+            $("#contenido").load("eliminarCliente.html");
+          });
+
+          $('#eliminarEmpleado').click(function(){
+            $("#contenido").load("eliminarEmpleado.html");
+          });
+        });
+      </script>
     </body>
 </html>

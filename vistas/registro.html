@@ -33,14 +33,6 @@
             </div>
             <div class="collapse navbar-collapse" id="menuDesplegable">
               <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Inmuebles<span class="caret"></span></a>
-                     <!--Menu desplegable-->
-                     <ul class="dropdown-menu" role="menu">
-                      <li><a href="">Locales</a></li>
-                      <li><a href="">Pisos</a></li>
-                     </ul>
-                  </li>
                 <li class="active"><a href="" >Registro</a></li>
                 <li><a href="login.html">Iniciar Sesion</a></li>
               </ul>
@@ -49,62 +41,65 @@
         </nav>
       </header>
       <section class="container">
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <div class="jumbotron">
-              <div class="row">
-                <h2 class="text-center">Registro</h2>
-              </div>
-              <div class="container">
+        <form action="../controladores/registro.php" method="POST">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div class="jumbotron">
                 <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="text" placeholder="NOMBRE" class="text-center">
-                  </div>
+                  <h2 class="text-center">Registro</h2>
                 </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="text" placeholder="APELLIDO PATERNO" class="text-center">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="text" placeholder="NOMBRE" class="text-center", name="nombre" required>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="text" placeholder="APELLIDO MATERNO" class="text-center">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="text" placeholder="APELLIDO PATERNO" class="text-center" name="apellido_paterno" required>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="text" placeholder="CORREO" class="text-center">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="text" placeholder="APELLIDO MATERNO" class="text-center" name="apellido_materno">
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="text" placeholder="USUARIO" class="text-center">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="text" placeholder="CORREO" class="text-center" name="correo" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 text-center">
-                    <input type="password" placeholder="PASSWORD" class="text-center">
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="text" placeholder="USUARIO" class="text-center" name="usuario" required>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4"></div>
-                  <div class="col-md-4 text-center">
-                    <br><br>
-                    <input type="button"  value="Registrarse" class="btn btn-primary" onclick="Mensaje()"/>
-                    <script>
-                      function Mensaje(){
-                        swal("Registro correcto","","success");
-                      }
-                    </script>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <input type="password" placeholder="PASSWORD" class="text-center" name="password" required>
+                    </div>
                   </div>
-                  <div class="col-md-4 text-center"></div>
+                  <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                      <br><br>
+                      <button class="btn btn-primary">Registrarse</button>
+                      <!--<input type="button"  value="Registrarse" class="btn btn-primary" onclick="Mensaje()"/>
+                      <script>
+                        function Mensaje(){
+                          swal("Registro correcto","","success");
+                        }
+                      </script>-->
+                    </div>
+                    <div class="col-md-4 text-center"></div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="col-md-3"></div>
           </div>
-          <div class="col-md-3"></div>
-        </div>
+        </form>
       </section>
     </div> 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
