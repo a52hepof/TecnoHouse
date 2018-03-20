@@ -1,5 +1,6 @@
 <?php
 	include_once "./../modelos/conexion.php";
+	$bandera = 0;
 	$usuario = $_POST["usuario"];
 	$password = $_POST["password"];
 	$sql = "SELECT * FROM CUENTA";
@@ -13,6 +14,10 @@
 			}else{
 				header( "Location: ./../vistas/cliente.html" );
 			}
+			$bandera = 1;
 		}
+	}
+	if( $bandera == 0 ){
+		header( "Location: ./../vistas/login.html" );
 	}
 ?>
