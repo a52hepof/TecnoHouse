@@ -317,5 +317,12 @@
 	INSERT INTO PISO( id_piso, id_inmueble, num_habitaciones, num_banios, tipo_ambiente, tipo_gas ) VALUES( DEFAULT, 2, 2, 2, 'INTERIOR', 'CIUDAD' );";
 	$sql .= "
 	INSERT INTO PISO( id_piso, id_inmueble, num_habitaciones, num_banios, tipo_ambiente, tipo_gas ) VALUES( DEFAULT, 4, 2, 1, 'EXTERIOR', 'BUTANO' );";
+
+	if( $conexion->multi_query( $sql ) === TRUE ){
+		;
+	}else{
+		echo "Error al cargar los datos.";
+	}
+	
 	$conexion->close();
 ?>
