@@ -1,5 +1,5 @@
 <?php
-	public class Empleado{
+	class Empleado{
 		private $id_empleado;
 		private $id_agencia;
 		private $nombre;
@@ -7,9 +7,6 @@
 		private $apellido_materno;
 		private $tipo_empleado;
 		private $id_cuenta;
-
-		function __construct(){
-		}
 
 		function __construct( $id_empleado, $id_agencia, $nombre, $apellido_paterno, $apellido_materno, $tipo_empleado, $id_cuenta ){
 			$this->id_empleado = $id_empleado;

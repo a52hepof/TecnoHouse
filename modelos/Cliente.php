@@ -1,5 +1,5 @@
 <?php
-	public class Cliente{
+	class Cliente{
 		private $id_cliente;
 		private $id_vendedor;
 		private $nombre;
@@ -8,11 +8,6 @@
 		private $correo;
 		private $id_cuenta;
 		private $id_direccion;
-
-
-		function __construct(){
-
-		}
 
 		function __construct( $id_cliente, $id_vendedor, $nombre, $apellido_paterno, $apellido_materno, $correo, $id_cuenta, $id_direccion ){
 			$this->id_cliente  = $id_cliente;

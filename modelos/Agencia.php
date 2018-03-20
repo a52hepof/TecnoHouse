@@ -1,14 +1,10 @@
 <?php
-	public class Agencia{
+	class Agencia{
 		private $id_agencia;
 		private $fax;
 		private $id_direccion;
 		private $id_titular;
 		private $id_zona;
-
-		function __construct(){
-
-		}
 
 		function __construct( $id_agencia, $fax, $id_direccion, $id_titular, $id_zona ){
 			$this->id_agencia = $id_agencia;
